@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+    background-color: #15152e;
+    height: 3rem;
+    width: 100%;
+}
+nav label.brand{
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 0 3rem;
+    line-height: 3rem;
+}
+
+nav ul{
+    float: right;
+    margin-right: 3rem;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 3rem;
+    padding: 0 1rem;
+}
+
+nav ul li a{
+    color: white;
+    font-size: .8rem;
+    padding: .3rem .8rem;
+    border-radius: 2px;
+}
+
+a.active, a:hover{
+    background-color: rgb(60, 43, 107);
+    transition: .3s;
+}
+
+.checkBtn{
+    font-size: 1.8rem;
+    color: white;
+    float: right;
+    margin-right: 1rem;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media only screen and (max-width: 710px) {
+    .checkBtn{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        height: 35%;
+        width: 100%;
+        top: -100%;
+        text-align: center;
+        background-color: #1b1b3a;
+        transition: all .8s;
+        z-index: -1;
+    }
+    nav ul li{
+        display: block;
+    }
+    #check:checked ~ ul { top:3rem; }
+}
